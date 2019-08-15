@@ -1,0 +1,863 @@
+/*.....................Global Setting........................*/
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*...................Custom Style html tag...............*/
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#back{/*........Custom Back Button..........*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 8px 12px;
+    background: black;
+    color: white; 
+    font-size: 18px;
+    border-radius: 0px 20px 0px 0px;
+}
+/*.....................Frame Wrapper...................*/
+.wrapper{
+    width: 300px;
+    height: 550px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.wrapper>.global_input{
+    display: none;
+}
+/*................................Mobile Home Design.................*/
+.mobile_home{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("https://cdn.pixabay.com/photo/2016/11/13/12/22/woman-1820868_960_720.jpg") 30% 0/ cover no-repeat;   
+    overflow: hidden!important;
+}
+/*.............................Notify Menu ........................*/
+.notify_menu{
+    z-index: 10000;
+    /* background: red; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+.notify_menu::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background: black;
+    top: 0px;
+    left: 50%;
+    transform:  translateX(-50%);
+    border-radius: 3px;
+}
+.notify_menu::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    top: 0px;
+    left: calc(50% - 4px);
+    border-radius: 50%;
+    z-index: 3;
+}
+.notify_menu > i{
+    margin: 0px 5px;
+}
+/*..............................Upper Menu Design..................*/
+.mobile_home .upper_menu{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+    top: 0px;
+    left: 0px;
+    /* border: 2px solid black; */
+}
+.upper_menu input[type="radio"]{
+    display: none;
+}
+.mobile_home .upper_menu .upper_menu_frame{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    /* border: 2px solid blue; */
+    background: black;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+    transform: perspective(880px) translateX(100px);
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.mobile_home .upper_menu .frame1{
+    background: url("https://cdn.pixabay.com/photo/2016/11/13/12/22/woman-1820868_960_720.jpg") 30% 0/ cover no-repeat;
+}
+.mobile_home .upper_menu .frame2{
+    background: url("https://cdn.pixabay.com/photo/2016/11/13/12/22/woman-1820868_960_720.jpg") 60% 0/ cover no-repeat;
+}
+.upper_menu #upper_menu_radio1:checked ~ .frame1,
+.upper_menu #upper_menu_radio2:checked ~ .frame2{
+    z-index: 5;
+    opacity: 1;
+    transform: translateX(0px);
+}
+/*......................Upper Menu Frame Dropdown Style ...................*/
+.upper_menu .upper_fr2_dr_menu{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.upper_menu .upper_fr2_dr_menu .calc_mr_dr{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    bottom: 0px;
+    left: 0px;
+    background: white;
+    transform: scale(0,0);
+    opacity: 0;
+    z-index: 1000;
+    transition: .5s;
+}
+.upper_menu .upper_fr2_dr_menu .calc_mr_dr a{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 8px 15px;
+    font-size: 18px;
+    text-decoration: none;
+    background: black;
+    color: white;
+    border-radius: 0px 30px 0px 0px;
+    z-index: 1001;
+}
+.upper_menu .upper_fr2_dr_menu .calc_mr_dr span{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+    width: 100%;
+    height: 150px;
+    background: white;
+}
+.upper_menu .upper_fr2_dr_menu .calc_mr_dr:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+.upper_menu .upper_fr2_dr_menu .calc_mr_dr iframe{
+    width: 100%;
+    height: 100%;
+}
+/*.........................Upper Menu Control.....................*/
+.mobile_home .upper_menu .upper_menu_control{
+    position: absolute;
+    bottom: 10px;
+    z-index: 10;
+    left: 50%;
+    transform: perspective(880px) translateX(-50%);
+}
+.upper_menu_control [for*="upper_menu_radio"]{
+    width: 10px;
+    height: 10px;
+    background: black;
+    display: inline-block;
+    border-radius: 50%;
+    transition: .5s;
+    cursor: pointer;
+}
+#upper_menu_radio1:checked ~ .upper_menu_control [for="upper_menu_radio1"] ,
+#upper_menu_radio2:checked ~ .upper_menu_control [for="upper_menu_radio2"]{
+    width: calc(10px + 5px);
+    height: calc(10px + 5px);
+}
+
+/*..............................Bottom Menu Design................*/
+.mobile_home .bottom_menu{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    background: url("https://cdn.pixabay.com/photo/2016/11/13/12/22/woman-1820868_960_720.jpg") 0 5%/ cover no-repeat;    
+}
+.bottom_menu .menu_option{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+}
+.bottom_menu .menu_option>a{
+    text-decoration: none;
+    width: 40px; 
+    height: 40px;
+}
+.bottom_menu .menu_option>a>img{
+    width: 100%;
+    height: 100%;
+}
+.bottom_menu .menu_option .menu{
+    border-radius: 50%;
+    display: inline-block;
+    background: white;
+    padding: 7px 7px;
+}
+/*...............................Call Option Style.........................*/
+.call_option{
+    position: absolute;
+    top: 5%;
+    left: 0px;
+    width: 100%;
+    height: 95%;
+    background:white;
+    transform: scale(0,0);
+    transition: .5s transform;
+    z-index: 1000;
+
+}
+.call_option:target{
+    transform: scale(1,1);
+}
+/*..............................Call Option Inner Style....................*/
+.call_option_inner_up{
+    height: 125px;
+    width: 100%;
+    overflow: auto;
+}
+.dial_content ul li a{
+    display: block;
+    color: #000;
+    font-weight: 800;
+    padding: 15px 10px 15px 60px;
+    transition: .5s background-color;
+    position: relative;
+}
+.dial_content ul li a::before{
+    content: "\f7c4";
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    color: rgba(255, 215, 0, .7);
+}
+.dial_content ul li:nth-child(odd){
+    background: rgba(0,0,0,0.3);
+}
+.dial_content ul li:nth-child(even){
+    background: rgba(0,0,0,0.4);
+}
+.dial_content ul li a:active{
+    background: rgba(0,0,0,0.5);
+}
+.dial_content ul li a span{
+    font-weight: 100;
+}
+/*.................................Dial Input Number.........................*/
+.dial_input_number{
+    height: 100px;
+    position: relative;
+}
+.dial_input_number input{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    padding: 0px 10px;
+}
+.dial_input_number span{
+    position: absolute;
+    width: 1px;
+    height: 35px;
+    background: black;
+    top: 35px;
+    right: 10px;
+    animation: dial_input_number infinite 1s ease-in-out;
+}
+.dial_input_number input:focus ~ span{
+    display: none;
+}
+.dial_input_number input::placeholder{
+    padding-right: 5px;
+}
+/*.................................Dial Type Number.......................*/
+.dial_type_number{
+    position: relative;
+    height: calc(95% - 200px);
+}
+.dial_type_number .dial_type_number_wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-flow: row wrap;
+}
+.dial_type_number_wrapper a{
+    display: inline-block;
+    flex-basis: 15%;
+    /* border: 1px solid blue; */
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    margin: 5px 20px;
+    position: relative;
+    color: black;
+}
+.dial_type_number_wrapper a::after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    border-radius: 50%;
+    background: rgba(0,0,0,0.3);
+    pointer-events: none;
+    transform: scale(0,0);
+    transition: .5s transform, .2s opacity;
+    opacity: 0;
+}
+.dial_type_number_wrapper a:active::after{
+    transform: scale(1.5,1.5);
+    opacity: 1;
+}
+.dial_if_else{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dial_if_else a{
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 40px;
+}
+.dial_if_else [href="tel:+8801770000000"]{
+    color: red;
+}
+.dial_if_else #back_from_call{
+    color: deeppink;
+}
+/*................................Contact Option.........................*/
+#mobile_contact{
+    position :absolute;
+    width: 100%;
+    height: 95%;
+    bottom: 0px;
+    background: white;
+    z-index: 1000;
+    transition: .5s;
+    transform: scale(0,0);
+    opacity: 0;
+}
+#mobile_contact:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+#mobile_contact ul{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+#mobile_contact ul li a{
+    padding: 12px 15px;
+    color: black;
+    display: block;
+    transition: .5;
+}
+#mobile_contact ul li:nth-of-type(odd){
+    background: rgba(255,0,0,0.05);
+}
+#mobile_contact ul li:nth-of-type(even){
+    background: rgba(0,255,0,0.05);
+}
+#mobile_contact ul li a:hover{
+    background: rgba(0,0,200, 0.05);
+}
+/*....................................Mobile Menu Option.........................*/
+.mobile_menu_option{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    top: 5%;
+    left: 0px;
+    transform: scale(0,0);
+    transition: .5s transform;
+    opacity: 1;
+    z-index: 1000;
+    background: url("https://media.treehugger.com/assets/images/2018/07/nature-benefits.jpg.860x0_q70_crop-scale.jpg") 30% 5%/ cover no-repeat;
+}
+.mobile_menu_option .ul_menu_list1{
+    background: url("https://media.treehugger.com/assets/images/2018/07/nature-benefits.jpg.860x0_q70_crop-scale.jpg") 30% -5%/ cover no-repeat;
+}
+.mobile_menu_option .ul_menu_list2{
+    background: url("https://media.treehugger.com/assets/images/2018/07/nature-benefits.jpg.860x0_q70_crop-scale.jpg") 60% -5%/ cover no-repeat;
+}
+.mobile_menu_option input{
+    display: none;
+}
+.mobile_menu_option:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+.mobile_menu_option ul{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 10px 30px;
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(50px);
+    z-index: -1;
+}
+/*...Control Label..*/
+.mobile_menu_option .label_control{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+}
+.mobile_menu_option .label_control label{
+    width: 15px;
+    height: 15px;
+    background: black;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.mobile_menu_option .label_control label::after{
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: red;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s;
+}
+.mobile_menu_option #m_menu1:checked ~ .label_control [for="m_menu1"]::after,
+.mobile_menu_option #m_menu2:checked ~ .label_control [for="m_menu2"]::after{
+    opacity: 1;
+}
+.mobile_menu_option #m_menu1:checked ~ .ul_menu_list1,
+.mobile_menu_option #m_menu2:checked ~ .ul_menu_list2{
+    opacity: 1;
+    transform: translateX(0px);
+    z-index: 100;
+}
+/*............................Mobile SMS Option Style..........................*/
+.mobile_sms_option{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    top: 5%;
+    left: 0px;
+    background: linear-gradient(cyan, orangered);
+    transform: scale(0,0);
+    transition: .5s transform;
+    opacity: 0;
+    z-index: 1000;
+}
+.mobile_sms_option:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+.mobile_sms_option ul form input,
+.mobile_sms_option ul form textarea{
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    resize: none;
+}
+.mobile_sms_option ul form input[type="submit"],
+.mobile_sms_option ul form input[type="reset"]{
+    color: white;
+    background: black;
+    width: 40%;
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.mobile_sms_option ul form input[type="reset"]{
+    float: right;
+}
+.mobile_sms_option ul form #search_contact{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 12px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.mobile_sms_option ul li{
+    display: inline-block;
+}
+.mobile_sms_option ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 7px;
+    background: linear-gradient(white, deeppink);
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0px 3px 5px black;
+}
+.mobile_sms_option ul li a#back{
+    margin: 0px;
+}
+/*..................................Mobile Browser (Chrome) Option...................*/
+.mobile_browser_option{
+        position: absolute;
+        width: 100%;
+        height: 95%;
+        top: 5%;
+        left: 0px;
+        background: linear-gradient(cyan, orangered);
+        transform: scale(0,0);
+        transition: .5s transform;
+        opacity: 0;
+        z-index: 1000;
+}
+.mobile_browser_option:target{
+        transform: scale(1,1);
+        opacity: 1;
+}
+.mobile_browser_option .iframe_wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mobile_browser_option .iframe_wrapper iframe{
+    width: 100%;
+    height: 100%;
+}
+.mobile_browser_option .iframe_wrapper #back{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 8px 10px;
+    display: inline-block;
+    background: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 0px 30px 0px 0px;
+}
+/*...........................Mobile Menu Option Dropdown.....................*/
+
+        /*..........................File Manager.......................*/
+
+.f_manager{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    z-index: 2000;
+    background: rgba(255,255,255,0.95);
+    bottom: 0px;
+    display: flex;
+    justify-content:center;
+    flex-flow: row wrap;
+    align-content: center;
+    padding: 0px 10px;
+    transform: scale(0,0);
+    opacity: 0;
+    transition: .5s;
+}
+.f_manager:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+.f_manager .f_manager_item{
+    width: 30%;
+    min-height: 40px;
+    margin: 5px;
+}
+.f_manager .f_manager_item a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+}
+    /*......................File Manager Child Dropdown.....................*/
+
+    /*................File Manager All Child Groups Style....................*/
+
+#f_manager_audio, #f_manager_video,
+#f_manager_image, #f_manager_apps,
+#f_manager_document{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    bottom: 0px;
+    z-index: 2000!important;
+    transform: scale(0,0);
+    opacity: 0;
+    transition: .5s;
+    background: white;
+} 
+#f_manager_audio iframe, #f_manager_video iframe,
+#f_manager_image iframe, #f_manager_apps iframe,
+#f_manager_document iframe{
+    width: 100%;
+    height: 100%;
+}   
+#f_manager_audio:target, #f_manager_video:target,
+#f_manager_image:target, #f_manager_apps:target,
+#f_manager_document:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+/*..................................Menu Settings......................*/
+#m_settings{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    bottom: 0px;
+    background: white;
+    transition: .5s;
+    transform: scale(0,0);
+    opacity: 0;
+    z-index: 1000;
+}
+#m_settings:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+#m_settings .ul_wrapper{
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+#m_settings .ul_wrapper h4{
+    color: dodgerblue;
+    padding: 10px;
+}
+#m_settings ul li a{
+    padding: 15px  10px 15px  40px;
+    font-size: 18px;
+    display: block;
+    color: black;
+    transition: .5s;
+    position: relative;
+}
+#m_settings ul li a:hover{
+    background: rgba(0,0,0,0.095);
+ }
+ /*
+#m_settings ul li a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: no-repeat left center/ 35px 35px;
+}
+#m_settings ul li a#call_s::before{
+    background-image: url("https://cdn4.iconfinder.com/data/icons/weby-flat-phone/64/Phone-07-512.png");
+
+}
+#m_settings ul li a#wifi_s::before{
+    background-image: url("https://www.androidcentral.com/sites/androidcentral.com/files/topic_images/2014/wifi.png");
+}
+#m_settings ul li a#bluetooth_s::before{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bluetooth.svg/220px-Bluetooth.svg.png");
+    background-size: 30px 30px;
+}
+#m_settings ul li a#sim_s::before{
+    background-image: url("https://www.simoptions.com/wp/wp-content/themes/simoptions/assets/img/sim-card-bg-min.png");
+}
+#m_settings ul li a#data_s::before{
+    background-image: url("");
+}
+#m_settings ul li a#more_s::before{
+    background-image: url("");
+} */
+/*...............Need More bg image ///// Need More bg image....................*/
+/*....................................Light Option......................*/
+#m_light{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    bottom: 0px;
+    background: white;
+    transition: .5s;
+    transform: scale(0,0);
+    opacity: 0;
+    z-index: 1000;
+}
+#m_light input{
+    display: none;
+}
+#m_light:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+#m_light label{
+    display: block;
+    width: 100px;
+    height: 40px;
+    border: 3px aqua ridge;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 20000;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#m_light label::after{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: blue;
+    border-radius: 20%;
+    top: calc(50% - 17.5px);
+    left: 0px;
+    transition: .5s;
+}
+#m_light input:checked ~ label::after{
+    left: 65%;
+    background: white;
+}
+#m_light .light_animate{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(55deg, rgba(255, 0, 0, .5) 50%, transparent 50%),
+               linear-gradient(-55deg, yellow 50%, transparent 50%);
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+#m_light input:checked ~ .light_animate{
+    animation: .02s linear infinite light_animate;
+    z-index: 10000;
+}
+/*...............................Sim Service..........................*/
+#sim_service{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    background: white;
+    z-index: 1000;
+    transition: .5s;
+    bottom: 0px;
+    transform: scale(0,0);
+    opacity: 0;
+}
+#sim_service:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+#sim_service ul li a{
+    padding: 15px 12px;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: .5s;
+}
+#sim_service ul li a:hover{
+    background: rgba(0,0,0,0.095);
+}
+/*.......................About Me............................*/
+#about_me_nl{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    bottom: 0px;
+    z-index: 1000;
+    background: white;
+    transform: scale(0,0);
+    opacity: 0;
+    transition: .5s;
+}
+#about_me_nl:target{
+    transform: scale(1,1);
+    opacity: 1;
+}
+#about_me_nl img{
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    padding: 0px 60px;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(rgba(0, 0, 255,0.2), rgba(0, 255, 255,0.2));
+}
+#about_me_nl ul h3{
+    padding: 8px 10px;
+    background: rgba(0,0,255,0.099);
+}
+#about_me_nl ul li{
+    padding: 4px;
+}
+#about_me_nl ul li a{
+    display: block;
+    padding: 15px;
+    transition: .5s;
+}
+#about_me_nl ul li:nth-of-type(odd){
+    background: rgba(255,0,0,.099);
+}
+#about_me_nl ul li:nth-of-type(even){
+    background: rgba(0,255,0,.099);
+}

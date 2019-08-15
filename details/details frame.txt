@@ -1,0 +1,5 @@
+for bottom menu= call, contact, menu, sms, browser
+
+for frame 1 = Calculator, Online Radio, Dictionary, Youtube, Gmail
+
+for frame 2 = About, Gallery, Facebook, Calender, Clock

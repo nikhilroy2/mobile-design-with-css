@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!----------Global Input-->
+        <input class="global_input " type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="checkbox" id="">
+        <input class="global_input" type="radio" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+        <input class="global_input" type="radio" id="" name="radio">
+
+        <!-----------------------Mobile Home--------------------->
+
+        <div class="mobile_home">
+
+            <!------------------Notify Menu-------------------->
+            <div class="notify_menu">
+
+                <i class="fas fa-volume-up"></i>
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+
+            <!------------------Upper Menu------------------->
+            <div class="upper_menu">
+                <input type="radio" id="upper_menu_radio1" name="radio" checked>
+                <input type="radio" id="upper_menu_radio2" name="radio">
+
+                <!---------------Upper Menu Frame 1----------->
+
+                <div class="upper_menu_frame frame1">
+                    <div class="frame_wrapper">
+                        <a title="Calculator" href="#calc_mr_opt"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame1/calculator.png" alt=""></a>
+                        <a title="Radio" href="#radio_mr_opt"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame1/radio.jfif" alt=""></a>
+                        <a title="Google Translator" href="market://details?id=com.google.android.apps.translate"
+                            target="_blank"><img style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame1/translate.png" alt=""></a>
+                        <a title="Youtube" href="market://details?id=com.google.android.youtube" target="_blank"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame1/youtube.png" alt=""></a>
+                        <a title="Gmail" href="market://details?id=com.google.android.gm" target="_blank"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame1/gmail.jfif" alt=""></a>
+                    </div>
+                </div>
+
+                <!---------------Upper Menu Frame 2----------->
+
+                <div class="upper_menu_frame frame2">
+                    <div class="frame_wrapper">
+                        <a title="About" href="#about_me"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame2/me.png" alt=""></a>
+                        <a title="Gallery" href="#image_mr_opt"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame2/gallery.jfif" alt=""></a>
+                        <a title="Facebook" href="market://details?id=com.facebook.katana" target="_blank"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame2/facebook.png" alt=""></a>
+                        <a title="Calender" href="#calendar_mr_opt"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame2/calender.jfif" alt=""></a>
+                        <a title="Clock" href="#clock_mr_opt"><img
+                                style=" margin: 20px;width: 40px;height: 40px; border-radius: 5px"
+                                src="image/frame2/clock.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <!------------------Upper Menu Frame Dropdown--------------------->
+                <div class="upper_fr2_dr_menu">
+                    <div id="calc_mr_opt" class="calc_mr_dr">
+                        <iframe src="https://www.online-calculator.com/simple-full-screen-calculator/" frameborder="0">
+                            Your Browser Doesn't Support!</iframe>
+                        <a href="#home" id="back"> Back</a>
+                        <span></span>
+                    </div>
+                    <div id="radio_mr_opt" class="calc_mr_dr">
+                        <iframe src="https://tunein.com/radio/Radio-Today-896-s65686/" frameborder="0"> Your Browser
+                            Doesn't Support!</iframe>
+                        <a href="#home" id="back"> Back</a>
+                    </div>
+                    <div id="clock_mr_opt" class="calc_mr_dr">
+                        <iframe src="https://www.nayuki.io/res/full-screen-clock-javascript/full-screen-clock-12hr.html"
+                            frameborder="0"> Your Browser Doesn't Support!</iframe>
+                        <a href="#home" id="back"> Back</a>
+                    </div>
+                    <div id="calendar_mr_opt" class="calc_mr_dr">
+                        <iframe src="https://www.calendarlabs.com/online-calendar/2019-calendar/"> Your Browser Doesn't
+                            Support!</iframe>
+                        <a href="#home" id="back"> Back</a>
+                    </div>
+                    <div id="image_mr_opt" class="calc_mr_dr">
+                        <iframe src="https://www.pexels.com/search/nature/" frameborder="0"> Your Browser Doesn't
+                            Support!</iframe>
+                        <a href="#home" id="back"> Back</a>
+                    </div>
+
+                </div>
+
+                <!---------------Upper Menu Control--------->
+
+                <div class="upper_menu_control">
+                    <label for="upper_menu_radio1"></label>
+                    <label for="upper_menu_radio2"></label>
+                </div>
+            </div>
+
+            <!-----------------Bottom Menu------------------>
+
+            <div class="bottom_menu">
+                <div class="menu_option">
+                    <a class="call" href="#mobile_call"><img src="image/button/call.png" alt=""></a>
+                    <a class="contact" href="#mobile_contact"> <img src="image/button/contact.png" alt=""></a>
+                    <a class="menu" href="#mobile_menu"><img src="image/button/menu.png" alt=""></a>
+                    <a class="sms" href="#mobile_sms"><img src="image/button/sms.png" alt=""></a>
+                    <a class="browser" href="#mobile_browser"><img src="image/button/chrome.png" alt=""></a>
+                </div>
+            </div>
+
+            <!--------------------------Call Option ----------------------->
+
+            <div id="mobile_call" class="call_option">
+                <div class="call_option_inner_up dial_content">
+                    <ul>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                        <li><a href="#mobile_call" class="">017700000000 <br>
+                                <span>Unknown Name</span></a></li>
+                    </ul>
+                </div>
+                <div class="dial_input_number">
+                    <input type="text" placeholder="Number">
+                    <span></span>
+                </div>
+                <div class="dial_type_number">
+                    <div class="dial_type_number_wrapper">
+                        <a href="#mobile_call" class="type_number">1</a>
+                        <a href="#mobile_call" class="type_number">2</a>
+                        <a href="#mobile_call" class="type_number">3</a>
+                        <a href="#mobile_call" class="type_number">4</a>
+                        <a href="#mobile_call" class="type_number">5</a>
+                        <a href="#mobile_call" class="type_number">6</a>
+                        <a href="#mobile_call" class="type_number">7</a>
+                        <a href="#mobile_call" class="type_number">8</a>
+                        <a href="#mobile_call" class="type_number">9</a>
+                        <a href="#mobile_call" class="type_number">*</a>
+                        <a href="#mobile_call" class="type_number">0</a>
+                        <a href="#mobile_call" class="type_number">#</a>
+                    </div>
+                    <div class="dial_if_else">
+                        <a id="call_now" href="tel:+8801770000000"><i class="fas fa-phone-alt"></i></a>
+                        <a id="back_from_call" href="#home"><i class="fas fa-times-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-----------------------Contact Option------------------------->
+            <div id="mobile_contact" class="contact_option">
+                <ul>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                    <li><a href="#mobile_call" class="">Unknown Name <br> +8801712345678 </a></li>
+                </ul>
+               <a href="#home" id="back">Back</a>
+            </div>
+            <!-----------------------Menu Option------------------------>
+            <div id="mobile_menu" class="mobile_menu_option">
+                <input type="radio" id="m_menu1" class="menu_label1" name="menu" checked>
+                <input type="radio" id="m_menu2" class="menu_label2" name="menu">
+                <a href="#"><img style="
+                    width: 30px; height: 30px;position: absolute; bottom: 15px; left: 15px; z-index: 500;"
+                        src="http://aux.iconspalace.com/uploads/1792896517.png" alt=""></a>
+                <div class="label_control">
+                    <label for="m_menu1"></label>
+                    <label for="m_menu2"></label>
+
+                </div>
+                <ul id="m_menu1" class="ul_menu_list1">
+                    <li><a title="Facebook" href="market://details?id=com.facebook.katana" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://www.daughtersofmarypress.com/images_design/Social%20Media%20Icons/Facebook.png"
+                                alt="">
+                        </a></li>
+                    <li><a title="Skype" href="market://details?id=com.skype.raider" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://cdn.makeawebsitehub.com/wp-content/uploads/2016/05/skype.png" alt="">
+                        </a></li>
+                    <li><a title="Google Plus" href="market://details?id=om.google.android.apps.plus" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://cdn.makeawebsitehub.com/wp-content/uploads/2016/05/g.png" alt="">
+                        </a></li>
+                    <li><a title="Instragram" href="market://details?id=com.instagram.android" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-square1-512.png"
+                                alt="">
+                        </a></li>
+                    <li><a title="File Manager" href="#file_memory">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://i2.wp.com/androidpicks.com/wp-content/uploads/2015/05/File-Manager-Logo-Android-Picks.png?fit=300%2C300&ssl=1"
+                                alt="">
+                        </a></li>
+                    <li><a title="Camera" href="market://details?id=com.google.android.GoogleCamera&hl=en_US"
+                            target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="http://trustwaymetal.com/wp-content/uploads/2014/09/can-you-scrap-digital-cameras.png"
+                                alt="">
+                        </a></li>
+                    <li><a title="Calender" href="#calendar_mr_opt">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="http://deserthills.org/wp-content/uploads/2018/03/calendar.png" alt="">
+                        </a></li>
+                    <li><a title="Calculator" href="#calc_mr_opt">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="http://www.myiconfinder.com/uploads/iconsets/256-256-13449218a6d2e7aa5aba7e09d0578ee4-calculator.png"
+                                alt="">
+                        </a></li>
+                    <li><a title="Settings" href="#m_settings">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/256/Settings-icon.png"
+                                alt="">
+                        </a></li>
+                    <li><a title="Google Map" href="market://details?id=com.google.android.apps.maps" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://www.google.com/images/branding/product/2x/maps_96in128dp.png" alt="">
+                        </a></li>
+                    <li><a title="Music" href="#f_manager_audio">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://static-s.aa-cdn.net/img/gp/20600008049277/LAizbDUkI_VSi9Jard6ByrxVQ7SSOrlAtAgw8kwAKmVIfRDsa2ef5N15LkF5Ob3Jiza2=w300?v=1"
+                                alt="">
+                        </a></li>
+                    <li><a title="Light" href="#m_light">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://static.wixstatic.com/media/2cd43b_31844ce00cf04315a0e69681e3f97740~mv2.png/v1/fill/w_256,h_256,fp_0.50_0.50/2cd43b_31844ce00cf04315a0e69681e3f97740~mv2.png"
+                                alt="">
+                        </a></li>
+                </ul>
+                <ul id="m_menu2" class="ul_menu_list2">
+                    <li><a title="Clash of Clans" href="market://details?id=com.supercell.clashofclans" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://lh3.googleusercontent.com/akv2Bdp7i5Vv-sl9FuP3_dhWpUO80zULf-Pkh6RFleomEp6pZorHuCNm3FbR9oAMunVK=s256-rw"
+                                alt="">
+                        </a></li>
+                    <li><a title="Google Translator" href="market://details?id=com.google.android.apps.translate"
+                            target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/1200px-Google_Translate_logo.svg.png"
+                                alt="">
+                        </a></li>
+                    <li><a title="Radio" href="#radio_mr_opt">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://www.johncochraneadvertising.com/wp-content/uploads/2016/02/radio300.png"
+                                alt="">
+                        </a></li>
+                    <li><a title="Call" href="#mobile_call">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://cdn4.iconfinder.com/data/icons/weby-flat-phone/64/Phone-07-512.png" alt="">
+                        </a></li>
+                    <li><a title="Contact" href="#mobile_contact">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://i2.wp.com/ausdroid.net/wp-content/uploads/2017/05/contacts.png?resize=300%2C300"
+                                alt="">
+                        </a></li>
+                    <li><a title="Netflix" href="market://details?id=com.netflix.mediaclient" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://www.apkmirror.com/wp-content/uploads/2019/02/5c748540e704e.png" alt="">
+                        </a></li>
+                    <li><a title="Youtube" href="market://details?id=com.google.android.youtube" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://www.webwise.ie/wp-content/uploads/2015/10/youtube.png" alt="">
+                        </a></li>
+                    <li><a title="Play Store" href="market://details?id=com.google.android.play.games" target="_blank">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://www.appsess.com/wp-content/uploads/2018/06/play-store-logo.png" alt="">
+                        </a></li>
+                    <li><a title="About Me" href="#about_me_nl">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://publicservice.go.ug/wp-content/uploads/2018/03/helpdesk-icon.png?w=640"
+                                alt="">
+                        </a></li>
+                    <li><a title="Sim Service" href="#sim_service">
+                            <img style=" margin: 12px;width: 40px;height: 40px; border-radius: 5px"
+                                src="https://cdn6.aptoide.com/imgs/d/d/b/ddb204457662201778d47b331199ebee_icon.png?w=256"
+                                alt="">
+                        </a></li>
+                </ul>
+            </div>
+            <!-------------------------Menu Option Dropdown---------------------------->
+            <div id="file_memory" class="f_manager">
+                <div class="f_manager_item audio"> <a title="Audio" href="#f_manager_audio">
+                        <img src="https://www.seaicons.com/wp-content/uploads/2017/02/Music-icon-3.png" alt=""
+                            width="100%" height="100%"> </a></div>
+                <div class="f_manager_item video"> <a title="Video" href="#f_manager_video">
+                        <img src="http://aux4.iconspalace.com/uploads/999682685734701893.png" alt="" width="100%"
+                            height="100%"> </a></div>
+                <div class="f_manager_item image"> <a title="Image" href="#f_manager_image">
+                        <img src="https://cdn4.iconfinder.com/data/icons/flatified/512/photos.png" alt="" width="100%"
+                            height="100%"> </a></div>
+                <div class="f_manager_item apps"> <a title="Apps" href="#f_manager_apps">
+                        <img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/050/thumb/androidlogo.png"
+                            alt="" width="100%" height="100%"> </a></div>
+                <div class="f_manager_item document"> <a title="Document" href="#f_manager_document">
+                        <img src="http://www.iconhot.com/icon/png/sleek-xp-folders/256/my-documents.png" alt=""
+                            width="100%" height="100%"> </a></div>
+                <a href="#home" id="back">Back</a>
+            </div>
+            <!----------------Menu Option Dropdown => Child Dropdown------->
+            <!---Audio--->
+            <div id="f_manager_audio" class="f_manager_audio">
+                <iframe src="https://www.radiocity.in/international/radiocity-dance" frameborder="0"></iframe>
+                <a href="#file_memory" id="back">Back</a>
+            </div>
+            <!---Video--->
+            <div id="f_manager_video" class="f_manager_video">
+                <iframe src="http://www.funenglishgames.com/videos/forkids/daysoftheweek.html" frameborder="0"></iframe>
+                <a href="#file_memory" id="back">Back</a>
+            </div>
+            <!---Image--->
+            <div id="f_manager_image" class="f_manager_image">
+                <iframe src="https://www.pexels.com/search/beauty/" frameborder="0"></iframe>
+                <a href="#file_memory" id="back">Back</a>
+            </div>
+            <!---Apps--->
+            <div id="f_manager_apps" class="f_manager_apps">
+                <iframe src="https://apknite.com/" frameborder="0"></iframe>
+                <a href="#file_memory" id="back">Back</a>
+            </div>
+            <!---Document--->
+            <div id="f_manager_document" class="f_manager_document">
+                <iframe src="https://www.banglabook.org/" frameborder="0"></iframe>
+                <a href="#file_memory" id="back">Back</a>
+            </div>
+            <!----------------------Settings Menu----------------->
+            <div id="m_settings" class="m_settings">
+                <div class="ul_wrapper">
+                    <ul class="wire_list">
+                        <h4>Wireless & networks</h4>
+                        <li><a href="#m_settings" id="call_s">Call Settings</a></li>
+                        <li><a href="#m_settings" id="wifi_s">Wi-Fi</a></li>
+                        <li><a href="#m_settings" id="bluetooth_s">Bluetooth</a></li>
+                        <li><a href="#m_settings" id="sim_s">SIM cards</a></li>
+                        <li><a href="#m_settings" id="data_s">Data usage</a></li>
+                        <li><a href="#m_settings" id="more_s">More</a></li>
+                    </ul>
+                    <ul class="m_device">
+                        <h4>Device</h4>
+                        <li><a href="#m_settings">Display</a></li>
+                        <li><a href="#m_settings">User Profile</a></li>
+                        <li><a href="#m_settings"> Prompt & notification</a></li>
+                        <li><a href="#m_settings">Storage</a></li>
+                        <li><a href="#m_settings">Battery</a></li>
+                        <li><a href="#m_settings">Apps</a></li>
+                        <li><a href="#m_settings">Delete applications</a></li>
+                    </ul>
+                    <ul class="m_personal">
+                        <h4>Personal</h4>
+                        <li><a href="#m_settings">Location</a></li>
+                        <li><a href="#m_settings">Security</a></li>
+                        <li><a href="#m_settings"> Accounts</a></li>
+                        <li><a href="#m_settings">Language & input</a></li>
+                        <li><a href="#m_settings">Backup & reset</a></li>
+                        <li><a href="#m_settings">Schedule power on & off</a></li>
+                    </ul>
+                    <ul class="m_system">
+                        <h4>System</h4>
+                        <li><a href="#m_settings">Date & time</a></li>
+                        <li><a href="#m_settings">Accessibility</a></li>
+                        <li><a href="#m_settings"> Printing</a></li>
+                        <li><a href="#m_settings">Developer options</a></li>
+                        <li><a href="#m_settings">About Phone</a></li>
+                    </ul>
+                </div>
+                <a href="#home" id="back">Back</a>
+            </div>
+            <!--------------------Light Option---------------->
+            <div id="m_light" class="m_light">
+                <input type="checkbox" id="light_check">
+                <label for="light_check"></label>
+                <div class="light_animate">
+
+                </div>
+                <a href="#home" id="back">Back</a>
+            </div>
+            <!-------------------Sim Service-------------------->
+            <div id="sim_service" class="sim_service">
+                <ul>
+                    <li><a href="#sim_service">SIM1</a></li>
+                    <li><a href="#sim_service">SIM2</a></li>
+                </ul>
+                <a href="#home" id="back">Back</a>
+            </div>
+            <!------------------About Me nl------------------->
+            <div id="about_me_nl" class="about_me_nl">
+                <img src="image/nikhilroy.jpg" alt="">
+                <ul> <h3>Font-End Web Designer</h3>
+                    <li><a target="_blank" href="http://linkedin.com/nikhilroy2" class="">Linkedin PortFolio</a></li>
+                    <li><a target="_blank" href="http://dribbble.com/nikhilroy2" class="">Dribbble PortFolio</a></li>
+                    <li><a target="_blank" href="tel: +8801774372294" class="">Call Me</a></li>
+                    <li><a target="_blank" href="mailto:nikhilchandraroypoet@gmail.com"> Email Me</a></li>
+                    <!--wtai://wp/mc;+8801774372294-->
+                </ul>
+                <a href="#home" id="back">Back</a>
+            </div>
+            <!----------------------Mobile SMS Option----------->
+            <div id="mobile_sms" class="mobile_sms_option">
+                <ul>
+                    <form action="/send-sms" method="post">
+                        <input type="text" style="width: 100%;" placeholder="Enter Your Number">
+                        <textarea placeholder="Write Your Text Here!" name="" id=""
+                            style="width: 100%; height: 300px;"></textarea>
+                        <input type="submit" value="Send Now">
+                        <input type="reset" value="Reset SMS">
+                        <a href="#mobile_contact" id="search_contact">Search Contact</a>
+                    </form>
+                </ul>
+                <ul>
+                    <li><a title="Inbox" href="#mobile_sms">Inbox</a></li>
+                    <li><a title="" href="#mobile_sms">Draftbox</a></li>
+                    <li><a title="" href="#mobile_sms">Sendbox</a></li>
+                    <li><a title="" href="#mobile_sms">Spanbox</a></li>
+                    <li><a title="" href="#mobile_sms">Convert MMS</a></li>
+                    <li><a title="" href="#mobile_sms">Settings</a></li>
+                    <li><a id="back" title="" href="#home">Back</a></li>
+                </ul>
+            </div>
+            <!---------------------Chrome Browser Option------------------>
+            <div id="mobile_browser" class="mobile_browser_option">
+                <div class="iframe_wrapper">
+                    <iframe src="https://all-io.net/">Your Browser
+                        Doesn't support Iframe!</iframe>
+                    <a href="#home" id="back"> Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
